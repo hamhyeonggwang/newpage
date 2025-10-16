@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import Image from 'next/image';
 import Navigation from './Navigation';
 
 // --- Helper: build a Möbius strip BufferGeometry (no deprecated examples needed) ---
@@ -386,9 +387,11 @@ export default function FuturisticMobiusLanding() {
         {useStaticHero ? (
           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
             <div className="relative">
-              <img 
+              <Image 
                 src={HERO_IMG_SRC} 
                 alt="OT neon Möbius logo forming O and T" 
+                width={800}
+                height={600}
                 className="max-w-full max-h-full object-contain"
                 onError={(e) => {
                   console.log('Image failed to load:', HERO_IMG_SRC);
@@ -439,7 +442,7 @@ export default function FuturisticMobiusLanding() {
           <div className="group relative overflow-hidden rounded-3xl border border-cyan-400/20 bg-gradient-to-br from-cyan-500/10 to-transparent backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
               <div className="aspect-video rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 mb-6 flex items-center justify-center">
-                <img src="/icf-mapper.png" alt="ICF Mapper" className="w-full h-full object-cover rounded-2xl" />
+                <Image src="/icf-mapper.png" alt="ICF Mapper" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
               </div>
               <div className="space-y-4">
                 <div>
@@ -468,7 +471,7 @@ export default function FuturisticMobiusLanding() {
           <div className="group relative overflow-hidden rounded-3xl border border-fuchsia-400/20 bg-gradient-to-br from-fuchsia-500/10 to-transparent backdrop-blur-sm hover:border-fuchsia-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
               <div className="aspect-video rounded-2xl bg-gradient-to-br from-fuchsia-500/20 to-pink-500/20 mb-6 flex items-center justify-center">
-                <img src="/neurorehab-scheduler.png" alt="NeuroRehab Scheduler" className="w-full h-full object-cover rounded-2xl" />
+                <Image src="/neurorehab-scheduler.png" alt="NeuroRehab Scheduler" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
               </div>
               <div className="space-y-4">
                 <div>
@@ -497,7 +500,7 @@ export default function FuturisticMobiusLanding() {
           <div className="group relative overflow-hidden rounded-3xl border border-indigo-400/20 bg-gradient-to-br from-indigo-500/10 to-transparent backdrop-blur-sm hover:border-indigo-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
               <div className="aspect-video rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 mb-6 flex items-center justify-center">
-                <img src="/ot-insight.png" alt="OT Insight" className="w-full h-full object-cover rounded-2xl" />
+                <Image src="/ot-insight.png" alt="OT Insight" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
               </div>
               <div className="space-y-4">
                 <div>
@@ -526,7 +529,7 @@ export default function FuturisticMobiusLanding() {
           <div className="group relative overflow-hidden rounded-3xl border border-green-400/20 bg-gradient-to-br from-green-500/10 to-transparent backdrop-blur-sm hover:border-green-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
               <div className="aspect-video rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 mb-6 flex items-center justify-center">
-                <img src="/rehabgame-studio.png" alt="RehabGame Studio" className="w-full h-full object-cover rounded-2xl" />
+                <Image src="/rehabgame-studio.png" alt="RehabGame Studio" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
               </div>
               <div className="space-y-4">
                 <div>
@@ -555,7 +558,7 @@ export default function FuturisticMobiusLanding() {
           <div className="group relative overflow-hidden rounded-3xl border border-yellow-400/20 bg-gradient-to-br from-yellow-500/10 to-transparent backdrop-blur-sm hover:border-yellow-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
               <div className="aspect-video rounded-2xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 mb-6 flex items-center justify-center">
-                <img src="/cognitive-games.png" alt="Cognitive Training Games" className="w-full h-full object-cover rounded-2xl" />
+                <Image src="/cognitive-games.png" alt="Cognitive Training Games" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
               </div>
               <div className="space-y-4">
                 <div>
@@ -592,9 +595,11 @@ export default function FuturisticMobiusLanding() {
           {/* Profile Image */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/10 to-fuchsia-500/10 backdrop-blur-sm">
-              <img 
+              <Image 
                 src="/profile-ham.png" 
                 alt="Ham Profile" 
+                width={400}
+                height={400}
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -608,7 +613,7 @@ export default function FuturisticMobiusLanding() {
                 </p>
                 <p className="text-white/80 text-sm leading-relaxed">
                   저는 인공지능과 ICF(국제기능·장애·건강분류)를 기반으로<br />
-                  임상 언어 데이터 속에서 인간의 "되어감(Becoming)"을 탐구하고 있습니다.
+                  임상 언어 데이터 속에서 인간의 &quot;되어감(Becoming)&quot;을 탐구하고 있습니다.
                 </p>
                 <p className="text-white/80 text-sm leading-relaxed">
                   병원에서 지역으로, 사례에서 시스템으로 —<br />

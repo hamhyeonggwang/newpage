@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function Navigation() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [menuItems]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -50,9 +51,11 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <img 
+            <Image 
               src="/hero-ot.png" 
               alt="OT Logo" 
+              width={32}
+              height={32}
               className="w-8 h-8 rounded-full object-cover border border-white/20 hover:border-white/40 transition-colors duration-300"
             />
             <span className="font-semibold tracking-wide text-white text-lg">
