@@ -431,7 +431,7 @@ export default function FuturisticMobiusLanding() {
       {/* Projects Section */}
       <section id="projects" className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Selected Projects</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Project</h2>
           <p className="text-white/70 max-w-3xl mx-auto text-lg">
             ICF, AI, 지역사회, 작업치료의 융합을 통한 혁신적인 재활 기술 솔루션
           </p>
@@ -461,7 +461,7 @@ export default function FuturisticMobiusLanding() {
                 </div>
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-white/60 text-sm">2024</span>
-                  <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">View Project →</a>
+                  <a href="https://chatgpt.com/g/g-6853a3c55f448191aadefb87182c708f-r-oti-lab-icf-geomsaeg-caesbos" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">View Project →</a>
                 </div>
               </div>
             </div>
