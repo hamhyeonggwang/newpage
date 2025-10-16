@@ -1,18 +1,18 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const menuItems = [
+  const menuItems = useMemo(() => [
     { id: 'home', label: 'Home', href: '#home' },
     { id: 'about', label: 'About', href: '#about' },
     { id: 'projects', label: 'Projects', href: '#projects' },
     { id: 'contact', label: 'Contact', href: '#contact' }
-  ];
+  ], []);
 
   // 스크롤 위치에 따른 활성 섹션 감지
   useEffect(() => {

@@ -415,8 +415,8 @@ export default function FuturisticMobiusLanding() {
           </p>
           <div className="mt-6 max-w-3xl mx-auto">
             <p className="text-sm sm:text-base text-white/60 italic leading-relaxed">
-              "삶은 행위에서 존재로, 존재에서 의미로<br />
-              그 모든 여정은 되어가는 과정 안에서"
+              &quot;삶은 행위에서 존재로, 존재에서 의미로<br />
+              그 모든 여정은 되어가는 과정 안에서&quot;
             </p>
           </div>
           <div className="mt-8 flex items-center justify-center gap-3">
