@@ -156,7 +156,7 @@ function makeParticleSystem(count = 1000, radius = 6) {
 }
 
 // --- (Dev) Self-tests for shader strings ---
-function runSelfTests({ bgMat, glowMat }) {
+function runSelfTests({ bgMat, glowMat }: { bgMat: any; glowMat: any }) {
   try {
     const bgSrc = bgMat.fragmentShader || "";
     const glowSrc = glowMat.fragmentShader || "";
