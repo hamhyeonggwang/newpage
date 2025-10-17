@@ -496,6 +496,65 @@ export default function FuturisticMobiusLanding() {
             </div>
           </div>
 
+          {/* 나의 작업치료, 당신의 작업 - 공저 */}
+          <div className="group relative overflow-hidden rounded-3xl border border-amber-400/20 bg-gradient-to-br from-amber-500/10 to-transparent backdrop-blur-sm hover:border-amber-400/40 transition-all duration-500 hover:scale-105">
+            <div className="p-6">
+              <div className="aspect-video rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 mb-6 flex items-center justify-center">
+                <Image src="/my-occupational-therapy.png" alt="나의 작업치료, 당신의 작업" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">나의 작업치료, 당신의 작업</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    작업치료의 본질과 실무를 다룬 공저 도서. 
+                    작업치료사의 경험과 지혜를 담아 
+                    작업치료의 가치와 의미를 전달하는 
+                    실무 중심의 전문서입니다.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-300 text-xs rounded-full">공저</span>
+                  <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">작업치료</span>
+                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">실무서</span>
+                  <span className="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">전문서</span>
+                </div>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-white/60 text-sm">2024</span>
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=282033239&srsltid=AfmBOorhDqb5XJp4UfhyN-r05LPVRiQrqO1LNLPj_O_9fvE9969Gm2xj" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 text-sm font-medium">View Book →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 감각통합 - 감각처리장애와 중재 - 편집위원 */}
+          <div className="group relative overflow-hidden rounded-3xl border border-violet-400/20 bg-gradient-to-br from-violet-500/10 to-transparent backdrop-blur-sm hover:border-violet-400/40 transition-all duration-500 hover:scale-105">
+            <div className="p-6">
+              <div className="aspect-video rounded-2xl bg-gradient-to-br from-violet-500/20 to-purple-500/20 mb-6 flex items-center justify-center">
+                <Image src="/sensory-integration.png" alt="감각통합 - 감각처리장애와 중재" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">감각통합 - 감각처리장애와 중재</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    감각처리장애와 중재에 대한 전문 도서. 
+                    감각통합 이론과 실제 중재 방법을 체계적으로 정리한 
+                    감각통합 치료의 핵심 지침서로 편집위원으로 참여했습니다.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-violet-500/20 text-violet-300 text-xs rounded-full">편집위원</span>
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">감각통합</span>
+                  <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full">중재</span>
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">전문서</span>
+                </div>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-white/60 text-sm">2024</span>
+                  <a href="https://www.nrbooks.kr/goods/search_result.php?search_key=%EA%B0%90%EA%B0%81%ED%86%B5%ED%95%A9" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-300 text-sm font-medium">View Book →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
