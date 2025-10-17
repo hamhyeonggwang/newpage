@@ -467,121 +467,35 @@ export default function FuturisticMobiusLanding() {
             </div>
           </div>
 
-          {/* NeuroRehab Scheduler */}
-          <div className="group relative overflow-hidden rounded-3xl border border-fuchsia-400/20 bg-gradient-to-br from-fuchsia-500/10 to-transparent backdrop-blur-sm hover:border-fuchsia-400/40 transition-all duration-500 hover:scale-105">
+          {/* R.OTi Lab - 인지훈련용 웹게임 */}
+          <div className="group relative overflow-hidden rounded-3xl border border-emerald-400/20 bg-gradient-to-br from-emerald-500/10 to-transparent backdrop-blur-sm hover:border-emerald-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-fuchsia-500/20 to-pink-500/20 mb-6 flex items-center justify-center">
-                <Image src="/neurorehab-scheduler.png" alt="NeuroRehab Scheduler" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
+              <div className="aspect-video rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 mb-6 flex items-center justify-center">
+                <Image src="/roti-lab.png" alt="R.OTi Lab" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
               </div>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">NeuroRehab Scheduler</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">R.OTi Lab</h3>
                   <p className="text-white/80 text-sm leading-relaxed">
-                    병원-지역 재활치료 예약 및 알림 자동화 워크플로우. 
-                    환자의 재활 일정을 최적화하고 치료사와 환자 간의 
-                    원활한 소통을 지원하는 지능형 스케줄링 시스템입니다.
+                    인지훈련용 웹게임 개발 플랫폼. Memory Game, Stroop Game, Pencil Game 등 
+                    다양한 인지 기능 향상을 위한 웹게임들을 제공하는 
+                    작업치료사 전용 교육 플랫폼입니다.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-fuchsia-500/20 text-fuchsia-300 text-xs rounded-full">React</span>
-                  <span className="px-3 py-1 bg-pink-500/20 text-pink-300 text-xs rounded-full">Node.js</span>
-                  <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">MongoDB</span>
-                  <span className="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">AI</span>
+                  <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs rounded-full">React</span>
+                  <span className="px-3 py-1 bg-teal-500/20 text-teal-300 text-xs rounded-full">Next.js</span>
+                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full">Tailwind</span>
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">Cognitive Training</span>
                 </div>
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-white/60 text-sm">2024</span>
-                  <a href="#" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-medium">View Project →</a>
+                  <a href="https://newhome-nine.vercel.app" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-sm font-medium">View Project →</a>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* OT Insight */}
-          <div className="group relative overflow-hidden rounded-3xl border border-indigo-400/20 bg-gradient-to-br from-indigo-500/10 to-transparent backdrop-blur-sm hover:border-indigo-400/40 transition-all duration-500 hover:scale-105">
-            <div className="p-6">
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 mb-6 flex items-center justify-center">
-                <Image src="/ot-insight.png" alt="OT Insight" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">OT Insight</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    기능·참여·환경 데이터를 시각화하는 대시보드 (ICF Core Set 기반). 
-                    환자의 재활 진행 상황을 직관적으로 파악할 수 있는 
-                    데이터 시각화 및 분석 플랫폼입니다.
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full">React</span>
-                  <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">D3.js</span>
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">TypeScript</span>
-                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full">ICF Core Set</span>
-                </div>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-white/60 text-sm">2024</span>
-                  <a href="#" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium">View Project →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* RehabGame Studio */}
-          <div className="group relative overflow-hidden rounded-3xl border border-green-400/20 bg-gradient-to-br from-green-500/10 to-transparent backdrop-blur-sm hover:border-green-400/40 transition-all duration-500 hover:scale-105">
-            <div className="p-6">
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 mb-6 flex items-center justify-center">
-                <Image src="/rehabgame-studio.png" alt="RehabGame Studio" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">RehabGame Studio</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    작업치료를 위한 웹게임 개발 플랫폼. 
-                    환자의 인지 기능과 운동 기능 향상을 위한 
-                    맞춤형 게임 콘텐츠를 쉽게 제작할 수 있는 도구입니다.
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-green-500/20 text-green-300 text-xs rounded-full">JavaScript</span>
-                  <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs rounded-full">Canvas API</span>
-                  <span className="px-3 py-1 bg-teal-500/20 text-teal-300 text-xs rounded-full">WebGL</span>
-                  <span className="px-3 py-1 bg-lime-500/20 text-lime-300 text-xs rounded-full">Game Design</span>
-                </div>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-white/60 text-sm">2024</span>
-                  <a href="#" className="text-green-400 hover:text-green-300 text-sm font-medium">View Project →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Cognitive Training Games */}
-          <div className="group relative overflow-hidden rounded-3xl border border-yellow-400/20 bg-gradient-to-br from-yellow-500/10 to-transparent backdrop-blur-sm hover:border-yellow-400/40 transition-all duration-500 hover:scale-105">
-            <div className="p-6">
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 mb-6 flex items-center justify-center">
-                <Image src="/cognitive-games.png" alt="Cognitive Training Games" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Cognitive Training Games</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    인지 기능 향상을 위한 웹게임 컬렉션. 
-                    기억력, 집중력, 문제해결능력 등을 향상시키는 
-                    다양한 미니게임들을 제공하는 플랫폼입니다.
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">HTML5</span>
-                  <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">CSS3</span>
-                  <span className="px-3 py-1 bg-amber-500/20 text-amber-300 text-xs rounded-full">JavaScript</span>
-                  <span className="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">Cognitive Science</span>
-                </div>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-white/60 text-sm">2024</span>
-                  <a href="#" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">View Project →</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
