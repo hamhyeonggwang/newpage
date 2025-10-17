@@ -660,6 +660,37 @@ export default function FuturisticMobiusLanding() {
 
       <section id="contact" className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-2xl sm:text-3xl font-semibold">Contact</h2>
+        
+        {/* SNS Links */}
+        <div className="mt-8 mb-8">
+          <h3 className="text-lg font-semibold text-white mb-4">Follow Me</h3>
+          <div className="flex flex-wrap gap-4">
+            <a 
+              href="https://www.instagram.com/starlight_daddy" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-400/30 rounded-xl hover:border-pink-400/50 transition-all duration-200"
+            >
+              <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs font-bold">IG</span>
+              </div>
+              <span className="text-white font-medium">Instagram</span>
+            </a>
+            
+            <a 
+              href="https://brunch.co.kr/@starlight-daddy" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 border border-orange-400/30 rounded-xl hover:border-orange-400/50 transition-all duration-200"
+            >
+              <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs font-bold">B</span>
+              </div>
+              <span className="text-white font-medium">Brunch Story</span>
+            </a>
+          </div>
+        </div>
+
         <form 
           action="mailto:h2g0614@gmail.com" 
           method="post" 
@@ -697,9 +728,8 @@ export default function FuturisticMobiusLanding() {
       </section>
 
       <footer className="px-6 py-10 border-t border-white/10 text-white/60 text-sm">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <div className="max-w-6xl mx-auto flex items-center justify-center">
           <div>© {new Date().getFullYear()} OT Futurist</div>
-          <a id="resume" href="#" className="hover:text-white">Download Résumé</a>
         </div>
       </footer>
     </div>
