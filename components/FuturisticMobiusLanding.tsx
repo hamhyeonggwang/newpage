@@ -432,9 +432,6 @@ export default function FuturisticMobiusLanding() {
       <section id="projects" className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Project</h2>
-          <p className="text-white/70 max-w-3xl mx-auto text-lg">
-            ICF, AI, 지역사회, 작업치료의 융합을 통한 혁신적인 재활 기술 솔루션
-          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
