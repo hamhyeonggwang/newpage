@@ -487,6 +487,32 @@ export default function FuturisticMobiusLanding() {
             </div>
           </div>
 
+          {/* 찍찍이와 냠냥이 - 영양분석 AI */}
+          <div className="group relative overflow-hidden rounded-3xl border border-pink-400/20 bg-gradient-to-br from-pink-500/10 to-transparent backdrop-blur-sm hover:border-pink-400/40 transition-all duration-500 hover:scale-105">
+            <div className="p-6">
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">찍찍이와 냠냥이</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    AI를 활용한 친근한 식생활 교육용 웹 애플리케이션. 
+                    음식 사진을 찍으면 AI가 영양소를 분석해주는 
+                    재미있는 영양 교육 플랫폼입니다.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-pink-500/20 text-pink-300 text-xs rounded-full">React</span>
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">AI</span>
+                  <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">Nutrition</span>
+                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">Education</span>
+                </div>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-white/60 text-sm">2024</span>
+                  <a href="https://diet-mauve.vercel.app" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 text-sm font-medium">View Project →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* 나의 작업치료, 당신의 작업 - 공저 */}
           <div className="group relative overflow-hidden rounded-3xl border border-amber-400/20 bg-gradient-to-br from-amber-500/10 to-transparent backdrop-blur-sm hover:border-amber-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
