@@ -438,9 +438,6 @@ export default function FuturisticMobiusLanding() {
           {/* ICF Mapper */}
           <div className="group relative overflow-hidden rounded-3xl border border-cyan-400/20 bg-gradient-to-br from-cyan-500/10 to-transparent backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 mb-6 flex items-center justify-center">
-                <Image src="/icf-mapper.png" alt="ICF Mapper" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
-              </div>
               <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">ICF Mapper</h3>
@@ -467,9 +464,6 @@ export default function FuturisticMobiusLanding() {
           {/* R.OTi Lab - 인지훈련용 웹게임 */}
           <div className="group relative overflow-hidden rounded-3xl border border-emerald-400/20 bg-gradient-to-br from-emerald-500/10 to-transparent backdrop-blur-sm hover:border-emerald-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 mb-6 flex items-center justify-center">
-                <Image src="/roti-lab.png" alt="R.OTi Lab" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
-              </div>
               <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">R.OTi Lab</h3>
@@ -496,9 +490,6 @@ export default function FuturisticMobiusLanding() {
           {/* 나의 작업치료, 당신의 작업 - 공저 */}
           <div className="group relative overflow-hidden rounded-3xl border border-amber-400/20 bg-gradient-to-br from-amber-500/10 to-transparent backdrop-blur-sm hover:border-amber-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 mb-6 flex items-center justify-center">
-                <Image src="/my-occupational-therapy.png" alt="나의 작업치료, 당신의 작업" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
-              </div>
               <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">나의 작업치료, 당신의 작업</h3>
@@ -526,9 +517,6 @@ export default function FuturisticMobiusLanding() {
           {/* 감각통합 - 감각처리장애와 중재 - 편집위원 */}
           <div className="group relative overflow-hidden rounded-3xl border border-violet-400/20 bg-gradient-to-br from-violet-500/10 to-transparent backdrop-blur-sm hover:border-violet-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-violet-500/20 to-purple-500/20 mb-6 flex items-center justify-center">
-                <Image src="/sensory-integration.png" alt="감각통합 - 감각처리장애와 중재" width={400} height={225} className="w-full h-full object-cover rounded-2xl" />
-              </div>
               <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">감각통합 - 감각처리장애와 중재</h3>
