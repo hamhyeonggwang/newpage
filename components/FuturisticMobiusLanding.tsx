@@ -479,7 +479,7 @@ export default function FuturisticMobiusLanding() {
                   <p className="text-white/80 text-sm leading-relaxed">
                     인지훈련용 웹게임 개발 플랫폼. Memory Game, Stroop Game, Pencil Game 등 
                     다양한 인지 기능 향상을 위한 웹게임들을 제공하는 
-                    작업치료사 전용 교육 플랫폼입니다.
+                    교육 플랫폼입니다.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2">
