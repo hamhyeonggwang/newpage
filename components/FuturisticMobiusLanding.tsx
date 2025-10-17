@@ -632,6 +632,27 @@ export default function FuturisticMobiusLanding() {
                 </div>
               </div>
 
+              {/* Awards */}
+              <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                <h4 className="text-lg font-semibold text-white mb-4">수상내역</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-white font-medium">대한작업치료사협회 협회장 표창</p>
+                      <p className="text-white/70 text-sm">2013년</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-white font-medium">대한작업치료사협회 서울지회장 표창</p>
+                      <p className="text-white/70 text-sm">2020년</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
