@@ -481,7 +481,7 @@ export default function FuturisticMobiusLanding() {
                 </div>
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-white/60 text-sm">2024</span>
-                  <a href="https://newhome-nine.vercel.app" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-sm font-medium">View Project →</a>
+                  <a href="https://cog-cvmd8knhk-starlight-papas-projects.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-sm font-medium">View Project →</a>
                 </div>
               </div>
             </div>
