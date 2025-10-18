@@ -468,16 +468,17 @@ export default function FuturisticMobiusLanding() {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">R.OTi Lab</h3>
                   <p className="text-white/80 text-sm leading-relaxed">
-                    인지훈련용 웹게임 개발 플랫폼. Memory Game, Stroop Game, Pencil Game 등 
-                    다양한 인지 기능 향상을 위한 웹게임들을 제공하는 
-                    교육 플랫폼입니다.
+                    인지능력 향상을 위한 웹 기반 게임 플랫폼. 
+                    다양한 인지훈련 게임을 통해 사용자의 
+                    인지 기능을 체계적으로 향상시키는 
+                    디지털 치료 솔루션입니다.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs rounded-full">React</span>
                   <span className="px-3 py-1 bg-teal-500/20 text-teal-300 text-xs rounded-full">Next.js</span>
-                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full">Tailwind</span>
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">Cognitive Training</span>
+                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full">Web Games</span>
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">Digital Therapy</span>
                 </div>
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-white/60 text-sm">2024</span>
