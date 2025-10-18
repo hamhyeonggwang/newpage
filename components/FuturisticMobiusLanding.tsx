@@ -565,38 +565,31 @@ export default function FuturisticMobiusLanding() {
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* 평가툴 사이트 */}
-            <div className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300 hover:scale-[1.02]">
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                  평가툴 사이트
-                </h3>
-                <div className="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">E</span>
+          {/* 평가툴 사이트 */}
+          <div className="group relative overflow-hidden rounded-3xl border border-amber-400/20 bg-gradient-to-br from-amber-500/10 to-transparent backdrop-blur-sm hover:border-amber-400/40 transition-all duration-500 hover:scale-105">
+            <div className="p-6">
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">평가툴 사이트</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    작업치료 평가를 위한 디지털 플랫폼. 
+                    다양한 평가도구를 통합하여 임상가의 평가 업무를 
+                    효율적으로 지원하는 웹 기반 솔루션입니다.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-300 text-xs rounded-full">Assessment Tools</span>
+                  <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">Digital Platform</span>
+                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">Clinical Support</span>
+                  <span className="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">Web Solution</span>
+                </div>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-white/60 text-sm">2024</span>
+                  <a href="https://assess-beige.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 text-sm font-medium">View Project →</a>
                 </div>
               </div>
-              <p className="text-white/80 text-sm leading-relaxed mb-4">
-                작업치료 평가를 위한 디지털 플랫폼. 
-                다양한 평가도구를 통합하여 임상가의 평가 업무를 효율적으로 지원하는 웹 기반 솔루션입니다.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-amber-500/20 text-amber-300 text-xs rounded-full">Assessment Tools</span>
-                <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">Digital Platform</span>
-                <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">Clinical Support</span>
-                <span className="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">Web Solution</span>
-              </div>
-              <a 
-                href="https://assess-beige.vercel.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-400/30 rounded-lg hover:border-amber-400/50 transition-all duration-200 group-hover:scale-105"
-              >
-                <span className="text-white font-medium">평가툴 사이트</span>
-                <svg className="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
             </div>
           </div>
 
