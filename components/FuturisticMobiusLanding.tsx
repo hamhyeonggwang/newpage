@@ -454,7 +454,7 @@ export default function FuturisticMobiusLanding() {
                   <span className="px-3 py-1 bg-green-500/20 text-green-300 text-xs rounded-full">ICF</span>
                 </div>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-white/60 text-sm">2024</span>
+                  <span className="text-white/60 text-sm">2025</span>
                   <a href="https://chatgpt.com/g/g-6853a3c55f448191aadefb87182c708f-r-oti-lab-icf-geomsaeg-caesbos" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">View Project →</a>
                 </div>
               </div>
@@ -481,7 +481,7 @@ export default function FuturisticMobiusLanding() {
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">Digital Therapy</span>
                 </div>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-white/60 text-sm">2024</span>
+                  <span className="text-white/60 text-sm">2025</span>
                   <a href="https://cog-cvmd8knhk-starlight-papas-projects.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-sm font-medium">View Project →</a>
                 </div>
               </div>
@@ -507,7 +507,7 @@ export default function FuturisticMobiusLanding() {
                   <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">Education</span>
                 </div>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-white/60 text-sm">2024</span>
+                  <span className="text-white/60 text-sm">2025</span>
                   <a href="https://diet-mauve.vercel.app" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 text-sm font-medium">View Project →</a>
                 </div>
               </div>
@@ -534,7 +534,7 @@ export default function FuturisticMobiusLanding() {
                   <span className="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">전문서</span>
                 </div>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-white/60 text-sm">2024</span>
+                  <span className="text-white/60 text-sm">2025</span>
                   <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=282033239&srsltid=AfmBOorhDqb5XJp4UfhyN-r05LPVRiQrqO1LNLPj_O_9fvE9969Gm2xj" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 text-sm font-medium">View Book →</a>
                 </div>
               </div>
@@ -560,7 +560,7 @@ export default function FuturisticMobiusLanding() {
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">전문서</span>
                 </div>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-white/60 text-sm">2024</span>
+                  <span className="text-white/60 text-sm">2025</span>
                   <a href="https://www.nrbooks.kr/goods/search_result.php?search_key=%EA%B0%90%EA%B0%81%ED%86%B5%ED%95%A9" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-300 text-sm font-medium">View Book →</a>
                 </div>
               </div>
@@ -586,7 +586,7 @@ export default function FuturisticMobiusLanding() {
                   <span className="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">Web Solution</span>
                 </div>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-white/60 text-sm">2024</span>
+                  <span className="text-white/60 text-sm">2025</span>
                   <a href="https://assess-beige.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 text-sm font-medium">View Project →</a>
                 </div>
               </div>
