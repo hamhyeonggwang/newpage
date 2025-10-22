@@ -488,12 +488,12 @@ export default function FuturisticMobiusLanding() {
             </div>
           </div>
 
-          {/* 찍찍이와 냠냥이 - 영양분석 AI */}
+          {/* 영양분석 웹앱 */}
           <div className="group relative overflow-hidden rounded-3xl border border-pink-400/20 bg-gradient-to-br from-pink-500/10 to-transparent backdrop-blur-sm hover:border-pink-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">찍찍이와 냠냥이</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">영양분석 웹앱</h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     AI를 활용한 친근한 식생활 교육용 웹 애플리케이션. 
                     음식 사진을 찍으면 AI가 영양소를 분석해주는 
