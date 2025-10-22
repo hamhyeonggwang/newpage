@@ -461,15 +461,15 @@ export default function FuturisticMobiusLanding() {
             </div>
           </div>
 
-          {/* R.OTi Lab - 인지훈련용 웹게임 */}
+          {/* 노인인지훈련 웹앱 */}
           <div className="group relative overflow-hidden rounded-3xl border border-emerald-400/20 bg-gradient-to-br from-emerald-500/10 to-transparent backdrop-blur-sm hover:border-emerald-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">R.OTi Lab</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">노인인지훈련 웹앱</h3>
                   <p className="text-white/80 text-sm leading-relaxed">
-                    인지능력 향상을 위한 웹 기반 게임 플랫폼. 
-                    다양한 인지훈련 게임을 통해 사용자의 
+                    노인을 위한 인지능력 향상 웹 애플리케이션. 
+                    다양한 인지훈련 게임을 통해 노인의 
                     인지 기능을 체계적으로 향상시키는 
                     디지털 치료 솔루션입니다.
                   </p>
@@ -482,7 +482,7 @@ export default function FuturisticMobiusLanding() {
                 </div>
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-white/60 text-sm">2025</span>
-                  <a href="https://cog-cvmd8knhk-starlight-papas-projects.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-sm font-medium">View Project →</a>
+                  <a href="https://cog-red.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-sm font-medium">View Project →</a>
                 </div>
               </div>
             </div>
