@@ -58,7 +58,7 @@ function buildMobiusGeometry({ R = 1.2, width = 0.35, segmentsU = 400, segmentsV
   return geo;
 }
 
-// --- Glow material: simple additive fresnel-ish look (no postprocessing needed) ---
+// --- Enhanced glow material with better depth and realism ---
 function makeGlowMaterial({ baseColor = new THREE.Color("#7c3aed") }) {
   const mat = new THREE.ShaderMaterial({
     transparent: true,
@@ -68,6 +68,7 @@ function makeGlowMaterial({ baseColor = new THREE.Color("#7c3aed") }) {
       uColor: { value: baseColor },
       uTime: { value: 0 },
       uTStrength: { value: 0 }, // side-view T emphasis
+      uIntensity: { value: 1.0 }, // glow intensity
     },
     vertexShader: `
       varying vec3 vNormal;
@@ -83,25 +84,37 @@ function makeGlowMaterial({ baseColor = new THREE.Color("#7c3aed") }) {
       uniform vec3 uColor;
       uniform float uTime;
       uniform float uTStrength;
+      uniform float uIntensity;
       varying vec3 vNormal;
       varying vec3 vWorldPos;
       void main(){
-        // Fresnel term
+        // Enhanced fresnel with multiple layers
         vec3 n = normalize(vNormal);
         vec3 v = normalize(cameraPosition - vWorldPos);
-        float fres = pow(1.0 - max(dot(n, v), 0.0), 2.5);
-        float pulse = 0.6 + 0.4 * sin(uTime * 1.5);
-        // Screen-space independent approximate T mask: use normal orientation bands
-        float soft = 0.25; // softness of bands
-        float hb = 0.05;   // horizontal bar threshold using |n.y|
-        float vb = 0.08;   // vertical stem threshold using |n.x|
+        float fres = pow(1.0 - max(dot(n, v), 0.0), 1.8);
+        float fres2 = pow(1.0 - max(dot(n, v), 0.0), 3.2);
+        
+        // Multi-layered pulsing effect
+        float pulse1 = 0.7 + 0.3 * sin(uTime * 1.2);
+        float pulse2 = 0.5 + 0.5 * sin(uTime * 2.1 + 1.0);
+        float pulse3 = 0.8 + 0.2 * sin(uTime * 0.8 + 2.0);
+        
+        // Enhanced T mask with better edge detection
+        float soft = 0.2;
+        float hb = 0.04;
+        float vb = 0.06;
         float hBand = 1.0 - smoothstep(hb, hb + soft, abs(n.y));
         float vBand = 1.0 - smoothstep(vb, vb + soft, abs(n.x));
-        float tMask = max(hBand * 0.9, vBand);
-        vec3 baseCol = uColor * (1.2 * fres * pulse);
-        vec3 tCol = uColor * (1.1 + 0.4 * sin(uTime * 2.0)) * tMask * uTStrength;
-        vec3 col = baseCol + tCol;
-        float alpha = clamp(fres * 1.5 + tMask * 0.9 * uTStrength, 0.0, 1.0);
+        float tMask = max(hBand * 0.95, vBand);
+        
+        // Multi-layered color composition
+        vec3 baseCol = uColor * (1.4 * fres * pulse1 * uIntensity);
+        vec3 midCol = uColor * (0.8 * fres2 * pulse2 * uIntensity * 0.6);
+        vec3 tCol = uColor * (1.3 + 0.5 * sin(uTime * 2.3)) * tMask * uTStrength * uIntensity;
+        vec3 edgeCol = uColor * (0.6 * fres * pulse3 * uIntensity * 0.4);
+        
+        vec3 col = baseCol + midCol + tCol + edgeCol;
+        float alpha = clamp(fres * 1.8 + fres2 * 0.6 + tMask * 1.1 * uTStrength, 0.0, 1.0) * uIntensity;
         gl_FragColor = vec4(col, alpha);
       }
     `,
@@ -252,37 +265,59 @@ export default function FuturisticMobiusLanding() {
     bg.position.z = -10;
     scene.add(bg);
 
-    // Möbius Strip Mesh (core) — metallic base
-    const mobiusGeo = buildMobiusGeometry({ R: 1.4, width: 0.38, segmentsU: 800, segmentsV: 60 });
+    // Möbius Strip Mesh (core) — enhanced metallic base with better geometry
+    const mobiusGeo = buildMobiusGeometry({ R: 1.4, width: 0.42, segmentsU: 1200, segmentsV: 80 });
     const metal = new THREE.MeshPhysicalMaterial({
       color: new THREE.Color("#94a3b8"),
-      metalness: 0.9,
-      roughness: 0.15,
-      transmission: 0.0,
-      clearcoat: 0.8,
-      clearcoatRoughness: 0.2,
+      metalness: 0.95,
+      roughness: 0.08,
+      transmission: 0.1,
+      clearcoat: 0.9,
+      clearcoatRoughness: 0.1,
       side: THREE.DoubleSide,
+      envMapIntensity: 1.2,
     });
     const mobius = new THREE.Mesh(mobiusGeo, metal);
     scene.add(mobius);
 
-    // Neon edge glow shell (slightly scaled up)
+    // Enhanced neon edge glow with multiple layers
     const glowMat = makeGlowMaterial({ baseColor: new THREE.Color("#7c3aed") });
     const glow = new THREE.Mesh(mobiusGeo.clone(), glowMat);
-    glow.scale.multiplyScalar(1.008);
+    glow.scale.multiplyScalar(1.012);
     scene.add(glow);
+
+    // Additional inner glow layer for depth
+    const innerGlowMat = makeGlowMaterial({ baseColor: new THREE.Color("#a78bfa") });
+    const innerGlow = new THREE.Mesh(mobiusGeo.clone(), innerGlowMat);
+    innerGlow.scale.multiplyScalar(0.995);
+    scene.add(innerGlow);
 
     // Particles
     const particles = makeParticleSystem(1200, 10);
     scene.add(particles);
 
-    // Lights
-    scene.add(new THREE.AmbientLight(0x6677aa, 0.5));
-    const p1 = new THREE.PointLight(0x6ee7ff, 2.2, 18);
-    const p2 = new THREE.PointLight(0xa78bfa, 2.2, 18);
+    // Enhanced lighting system for better depth and realism
+    scene.add(new THREE.AmbientLight(0x6677aa, 0.4));
+    
+    // Main rim lights for depth
+    const p1 = new THREE.PointLight(0x6ee7ff, 3.0, 20);
+    const p2 = new THREE.PointLight(0xa78bfa, 3.0, 20);
     p1.position.set(4, 1.5, 2);
     p2.position.set(-4, -1.5, -2);
     scene.add(p1, p2);
+
+    // Additional accent lights for more depth
+    const accent1 = new THREE.PointLight(0x7c3aed, 1.5, 15);
+    const accent2 = new THREE.PointLight(0x06b6d4, 1.5, 15);
+    accent1.position.set(0, 3, 3);
+    accent2.position.set(0, -3, -3);
+    scene.add(accent1, accent2);
+
+    // Directional light for overall illumination
+    const dirLight = new THREE.DirectionalLight(0xffffff, 0.3);
+    dirLight.position.set(5, 5, 5);
+    dirLight.castShadow = true;
+    scene.add(dirLight);
 
     const clock = new THREE.Clock();
     let raf: number;
@@ -312,25 +347,41 @@ export default function FuturisticMobiusLanding() {
     };
     window.addEventListener("resize", onResize);
 
-    // Animation
+    // Enhanced animation with smoother motion
     function animate() {
       const t = clock.getElapsedTime();
 
-      // Auto-rotation for the strip (to showcase O → T transition during a cycle)
-      const slow = 0.25; // base speed
+      // Smoother auto-rotation with subtle variations
+      const slow = 0.2; // slightly slower base speed
       const autoY = t * slow;
+      const subtleWobble = Math.sin(t * 0.3) * 0.05; // subtle breathing motion
+      
       mobius.rotation.set(
-        THREE.MathUtils.damp(mobius.rotation.x, targetRot.x, 4, 0.016),
-        autoY + THREE.MathUtils.damp(0, targetRot.y, 4, 0.016),
-        0
+        THREE.MathUtils.damp(mobius.rotation.x, targetRot.x + subtleWobble, 3, 0.016),
+        autoY + THREE.MathUtils.damp(0, targetRot.y, 3, 0.016),
+        Math.sin(t * 0.1) * 0.02 // subtle z-axis rotation
       );
+      
+      // Synchronized rotation for all glow layers
       glow.rotation.copy(mobius.rotation);
+      innerGlow.rotation.copy(mobius.rotation);
 
-      // Pulse lights around the strip
-      p1.position.x = Math.cos(t * 0.7) * 3.6;
-      p1.position.z = Math.sin(t * 0.7) * 3.6;
-      p2.position.x = Math.cos(t * -0.9 + Math.PI * 0.5) * 3.8;
-      p2.position.z = Math.sin(t * -0.9 + Math.PI * 0.5) * 3.8;
+      // Enhanced light animation with more organic movement
+      const lightRadius = 4.2;
+      const lightSpeed1 = 0.5;
+      const lightSpeed2 = 0.7;
+      
+      p1.position.x = Math.cos(t * lightSpeed1) * lightRadius;
+      p1.position.z = Math.sin(t * lightSpeed1) * lightRadius;
+      p1.position.y = 1.5 + Math.sin(t * 0.4) * 0.3;
+      
+      p2.position.x = Math.cos(t * lightSpeed2 + Math.PI * 0.5) * lightRadius;
+      p2.position.z = Math.sin(t * lightSpeed2 + Math.PI * 0.5) * lightRadius;
+      p2.position.y = -1.5 + Math.cos(t * 0.3) * 0.3;
+
+      // Accent lights subtle movement
+      accent1.position.y = 3 + Math.sin(t * 0.2) * 0.5;
+      accent2.position.y = -3 + Math.cos(t * 0.25) * 0.5;
 
       // Side-view detection for the T illusion
       const yRotMod = (mobius.rotation.y % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2);
@@ -342,9 +393,17 @@ export default function FuturisticMobiusLanding() {
       const target = vis > 0.08 ? 1 : 0; // hysteresis target
       tHold = THREE.MathUtils.damp(tHold, target, 2.5, 0.016);
 
-      // shader uniforms
+      // Enhanced shader uniforms with intensity variations
+      const intensityVariation = 0.8 + 0.2 * Math.sin(t * 0.5);
+      
       glowMat.uniforms.uTime.value = t;
       glowMat.uniforms.uTStrength.value = tHold;
+      glowMat.uniforms.uIntensity.value = intensityVariation;
+      
+      innerGlowMat.uniforms.uTime.value = t;
+      innerGlowMat.uniforms.uTStrength.value = tHold * 0.7;
+      innerGlowMat.uniforms.uIntensity.value = intensityVariation * 0.6;
+      
       particles.material.uniforms.uTime.value = t;
       bgMat.uniforms.uTStrength.value = tHold;
 
@@ -357,10 +416,14 @@ export default function FuturisticMobiusLanding() {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("pointermove", onPointerMove);
-      // Dispose
+      // Enhanced cleanup for all geometries and materials
       mobiusGeo.dispose();
       bgGeo.dispose();
       glow.geometry.dispose();
+      innerGlow.geometry.dispose();
+      glowMat.dispose();
+      innerGlowMat.dispose();
+      metal.dispose();
       renderer.dispose();
     };
   }, [useStaticHero]);
@@ -630,41 +693,31 @@ export default function FuturisticMobiusLanding() {
             <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
               <div className="space-y-4">
                 <p className="text-white/90 text-sm leading-relaxed">
-                  안녕하세요, 인간의 삶을 다시 디자인하는 작업치료사 함형광입니다.
+                  안녕하세요. 인간의 삶을 다시 디자인하는 작업치료사, 함형광입니다.
                 </p>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  저는 인공지능과 ICF(국제기능·장애·건강분류)를 기반으로<br />
-                  임상 언어 데이터 속에서 인간의 &quot;되어감(Becoming)&quot;을 탐구하고 있습니다.
+                  저는 사람의 '할 수 있음'을 넘어 <span className="text-cyan-400 font-medium">*'되어감(Becoming)'*</span>의 여정을 함께합니다.
                 </p>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  병원에서 지역으로, 사례에서 시스템으로 —<br />
-                  삶의 연결과 참여를 새롭게 정의하는 여정을 이어갑니다.
+                  작업치료는 기능을 회복하는 일을 넘어,<br />
+                  삶의 의미를 다시 세우는 과정이라 믿습니다.
+                </p>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  병원 안에서 시작된 변화가<br />
+                  학교와 지역, 그리고 사회로 이어지길 바랍니다.
+                </p>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  사람의 가능성은 데이터가 아닌 이야기에서 시작됩니다.<br />
+                  그 이야기가 '실천'되고 다시 '참여'로 이어질 때,<br />
+                  우리는 진짜 변화를 만납니다.
+                </p>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  언제나 사람의 가능성을 이야기하고 싶습니다.<br />
+                  편하게 연락 주세요. 함께 나누는 대화가 또 하나의 시작이 되길 바랍니다.
                 </p>
               </div>
             </div>
 
-            {/* Quick Stats */}
-            <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <h4 className="text-lg font-semibold text-white mb-4">핵심 역량</h4>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">15+</div>
-                  <div className="text-white/70 text-sm">임상 경력</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-fuchsia-400">3</div>
-                  <div className="text-white/70 text-sm">협회 이사</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-indigo-400">5+</div>
-                  <div className="text-white/70 text-sm">강의 과정</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-yellow-400">3</div>
-                  <div className="text-white/70 text-sm">수상 경력</div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Content */}
