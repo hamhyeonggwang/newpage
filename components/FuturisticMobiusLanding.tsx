@@ -713,6 +713,13 @@ export default function FuturisticMobiusLanding() {
                       <p className="text-white/70 text-sm">2020년</p>
                     </div>
                   </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-white font-medium">서울시 의료기사총연합회 회장 표창</p>
+                      <p className="text-white/70 text-sm">2023년</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
