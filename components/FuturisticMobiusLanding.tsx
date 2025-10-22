@@ -612,9 +612,9 @@ export default function FuturisticMobiusLanding() {
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-fuchsia-400 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Profile Image */}
-          <div className="relative">
+          <div className="relative space-y-8">
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/10 to-fuchsia-500/10 backdrop-blur-sm">
               <Image 
                 src="/profile-ham.png" 
@@ -627,7 +627,7 @@ export default function FuturisticMobiusLanding() {
             </div>
             
             {/* Greeting Message */}
-            <div className="mt-8 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+            <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
               <div className="space-y-4">
                 <p className="text-white/90 text-sm leading-relaxed">
                   안녕하세요, 인간의 삶을 다시 디자인하는 작업치료사 함형광입니다.
@@ -640,6 +640,29 @@ export default function FuturisticMobiusLanding() {
                   병원에서 지역으로, 사례에서 시스템으로 —<br />
                   삶의 연결과 참여를 새롭게 정의하는 여정을 이어갑니다.
                 </p>
+              </div>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+              <h4 className="text-lg font-semibold text-white mb-4">핵심 역량</h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400">15+</div>
+                  <div className="text-white/70 text-sm">임상 경력</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-fuchsia-400">3</div>
+                  <div className="text-white/70 text-sm">협회 이사</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-indigo-400">5+</div>
+                  <div className="text-white/70 text-sm">강의 과정</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-400">3</div>
+                  <div className="text-white/70 text-sm">수상 경력</div>
+                </div>
               </div>
             </div>
           </div>
