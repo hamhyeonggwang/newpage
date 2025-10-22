@@ -567,12 +567,12 @@ export default function FuturisticMobiusLanding() {
             </div>
           </div>
 
-          {/* 평가툴 사이트 */}
+          {/* OT Assess Tool Box */}
           <div className="group relative overflow-hidden rounded-3xl border border-amber-400/20 bg-gradient-to-br from-amber-500/10 to-transparent backdrop-blur-sm hover:border-amber-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">평가툴 사이트</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">OT Assess Tool Box</h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     작업치료 평가를 위한 디지털 플랫폼. 
                     다양한 평가도구를 통합하여 임상가의 평가 업무를 
