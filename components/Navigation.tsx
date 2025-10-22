@@ -11,7 +11,7 @@ export default function Navigation() {
     { id: 'home', label: 'Home', href: '#home' },
     { id: 'about', label: 'About', href: '#about' },
     { id: 'projects', label: 'Projects', href: '#projects' },
-    { id: 'books', label: '도서', href: '#books' },
+    { id: 'books', label: 'Book', href: '#books' },
     { id: 'contact', label: 'Contact', href: '#contact' }
   ], []);
 

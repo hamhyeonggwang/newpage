@@ -547,7 +547,7 @@ export default function FuturisticMobiusLanding() {
       {/* Books Section */}
       <section id="books" className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">도서</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Book</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
