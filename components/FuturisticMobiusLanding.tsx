@@ -656,30 +656,100 @@ export default function FuturisticMobiusLanding() {
               </p>
             </div>
 
-            {/* Career Summary */}
+            {/* Education */}
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <h4 className="text-lg font-semibold text-white mb-4">주요 경력</h4>
+                <h4 className="text-lg font-semibold text-white mb-4">학력</h4>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <p className="text-white font-medium">푸르메재단 넥슨어린이재활병원</p>
-                      <p className="text-white/70 text-sm">학령기치료팀장</p>
+                      <p className="text-white font-medium">건양대학교 작업치료학과</p>
+                      <p className="text-white/70 text-sm">졸업</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <p className="text-white font-medium">강원대학교 일반대학원</p>
-                      <p className="text-white/70 text-sm">작업치료학 석사과정</p>
+                      <p className="text-white font-medium">강원대학교 일반대학원 작업치료학과</p>
+                      <p className="text-white/70 text-sm">석사수료 (ICF 기반 임상 언어 데이터의 기능분류 및 sLLM 개발 연구 수행 중)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Clinical Experience */}
+              <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                <h4 className="text-lg font-semibold text-white mb-4">임상경력</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-white font-medium">푸르메재단 넥슨어린이재활병원</p>
+                      <p className="text-white/70 text-sm">학령기치료팀장 (현)</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-white font-medium">국민건강보험공단 일산병원</p>
+                      <p className="text-white/70 text-sm">소아작업치료팀 (전)</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <p className="text-white font-medium">ICF 기반 임상 언어 데이터 sLLM 개발 연구</p>
-                      <p className="text-white/70 text-sm">책임연구자</p>
+                      <p className="text-white font-medium">신촌 연세의료원 재활병원</p>
+                      <p className="text-white/70 text-sm">소아작업치료팀 (전)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Association Activities */}
+              <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                <h4 className="text-lg font-semibold text-white mb-4">협회/학회 활동</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-white font-medium">대한작업치료사협회 서울지부</p>
+                      <p className="text-white/70 text-sm">이사</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-white font-medium">대한아동.학교작업치료학회</p>
+                      <p className="text-white/70 text-sm">이사</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Teaching Experience */}
+              <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                <h4 className="text-lg font-semibold text-white mb-4">강의경력</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-white font-medium">대한소아재활발달의학회</p>
+                      <p className="text-white/70 text-sm">소아재활 전문과정</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-white font-medium">대한아동.학교작업치료학회</p>
+                      <p className="text-white/70 text-sm">아동발달평가사 / 인지발달심리상담지도사 과정</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-white font-medium">동남보건대학교</p>
+                      <p className="text-white/70 text-sm">전공심화 과정</p>
                     </div>
                   </div>
                 </div>
