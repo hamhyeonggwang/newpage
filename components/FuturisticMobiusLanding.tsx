@@ -514,6 +514,43 @@ export default function FuturisticMobiusLanding() {
             </div>
           </div>
 
+
+          {/* OT Assess Tool Box */}
+          <div className="group relative overflow-hidden rounded-3xl border border-amber-400/20 bg-gradient-to-br from-amber-500/10 to-transparent backdrop-blur-sm hover:border-amber-400/40 transition-all duration-500 hover:scale-105">
+            <div className="p-6">
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">OT Assess Tool Box</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    작업치료 평가를 위한 디지털 플랫폼. 
+                    다양한 평가도구를 통합하여 임상가의 평가 업무를 
+                    효율적으로 지원하는 웹 기반 솔루션입니다.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-300 text-xs rounded-full">Assessment Tools</span>
+                  <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">Digital Platform</span>
+                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">Clinical Support</span>
+                  <span className="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">Web Solution</span>
+                </div>
+                <div className="flex items-center justify-between pt-2">
+                  <span className="text-white/60 text-sm">2025</span>
+                  <a href="https://assess-beige.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 text-sm font-medium">View Project →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Books Section */}
+      <section id="books" className="max-w-7xl mx-auto px-6 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">도서</h2>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* 나의 작업치료, 당신의 작업 - 공저 */}
           <div className="group relative overflow-hidden rounded-3xl border border-amber-400/20 bg-gradient-to-br from-amber-500/10 to-transparent backdrop-blur-sm hover:border-amber-400/40 transition-all duration-500 hover:scale-105">
             <div className="p-6">
@@ -566,33 +603,6 @@ export default function FuturisticMobiusLanding() {
               </div>
             </div>
           </div>
-
-          {/* OT Assess Tool Box */}
-          <div className="group relative overflow-hidden rounded-3xl border border-amber-400/20 bg-gradient-to-br from-amber-500/10 to-transparent backdrop-blur-sm hover:border-amber-400/40 transition-all duration-500 hover:scale-105">
-            <div className="p-6">
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">OT Assess Tool Box</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    작업치료 평가를 위한 디지털 플랫폼. 
-                    다양한 평가도구를 통합하여 임상가의 평가 업무를 
-                    효율적으로 지원하는 웹 기반 솔루션입니다.
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-amber-500/20 text-amber-300 text-xs rounded-full">Assessment Tools</span>
-                  <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">Digital Platform</span>
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">Clinical Support</span>
-                  <span className="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">Web Solution</span>
-                </div>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-white/60 text-sm">2025</span>
-                  <a href="https://assess-beige.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 text-sm font-medium">View Project →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
