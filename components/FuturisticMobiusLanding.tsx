@@ -608,7 +608,7 @@ export default function FuturisticMobiusLanding() {
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/10 to-fuchsia-500/10 backdrop-blur-sm">
               <Image 
                 src="/profile-ham.png" 
-                alt="Ham Profile" 
+                alt="함형광 프로필" 
                 width={400}
                 height={400}
                 className="w-full h-auto object-cover"
