@@ -198,6 +198,20 @@ function detectStaticHero() {
   return false; // default 3D mode
 }
 
+// --- Calculate clinical experience years ---
+function calculateClinicalYears(): number {
+  const startYear = 2013; // 2013년이 1년차
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth() + 1; // 0-based to 1-based
+  
+  // 2013년 1월부터 시작이므로, 현재 연도에서 2013을 빼고 1을 더함
+  // 예: 2013년 = 1년차, 2025년 = 13년차
+  const years = currentYear - startYear + 1;
+  
+  return years;
+}
+
 // --- Main Component ---
 export default function FuturisticMobiusLanding() {
   const HERO_IMG_SRC = "/hero-ot.png"; // your hero image
@@ -205,6 +219,7 @@ export default function FuturisticMobiusLanding() {
   const mountRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [useStaticHero, setUseStaticHero] = useState(false);
+  const clinicalYears = calculateClinicalYears();
 
   useEffect(() => {
     setUseStaticHero(detectStaticHero());
@@ -756,7 +771,10 @@ export default function FuturisticMobiusLanding() {
 
               {/* Clinical Experience */}
               <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <h4 className="text-lg font-semibold text-white mb-4">임상경력</h4>
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="text-lg font-semibold text-white">임상경력</h4>
+                  <span className="text-cyan-400 font-bold text-xl">{clinicalYears}년차</span>
+                </div>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
